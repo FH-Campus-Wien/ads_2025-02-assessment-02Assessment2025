@@ -30,11 +30,15 @@ class TestAssessment02(unittest.TestCase):
     def test_calculate_average_with_zero_in_numbers(self):
         self.assertAlmostEqual(calculate_average([0, 5, 10]), 5.0)
 
-    # 1.5
+    # 1
+    def test_calculate_average_with_empty_list(self):
+        self.assertAlmostEqual(calculate_average([]), 0)
+
+    # 1
     def test_get_student_average_student_found_multiple_scores(self):
         self.assertAlmostEqual(get_student_average("Alice", self.data), 90.0)
 
-    # 1.5
+    # 1
     def test_get_student_average_student_found_single_score(self):
         self.assertAlmostEqual(get_student_average("Bob", self.data), 70.0)
 
